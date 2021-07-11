@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400");
+
+:root {
+  /* primary */
+  --primary-0: #f0efff;
+  --primary-50: #d8d6ff;
+  --primary-100: #c1beff;
+  --primary-200: #aaa5ff;
+  --primary-300: #938dff;
+  --primary-400: #7b74ff;
+  /* main */
+  --primary-500: #645cff;
+  --primary-600: #554ed9;
+  --primary-700: #4640b3;
+  --primary-800: #37338c;
+  --primary-900: #282566;
+  --primary-1000: #191740;
+  --primary-1100: #0a0919;
+ /* Gray  */
+--grey-0: #fafbfc;
+  --grey-50: #f2f4f8;
+  --grey-100: #eaedf3;
+  --grey-200: #e2e7ef;
+  --grey-300: #dbe0ea;
+  --grey-400: #d3dae6;
+  --grey-500: #cbd3e1;
+  --grey-600: #adb3bf;
+  --grey-700: #8e949e;
+  --grey-800: #70747c;
+  --grey-900: #51545a;
+  --grey-1000: #333538;
+  --grey-1100: #141516;
+  /* rest color */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;  
+  /* typography */
+  --defaultFontSize: 87.5%;
+  --headingFont: "Inconsolata", monospace;
+  --bodyFont: "Montserrat", sans-serif;
+  --smallText: 0.8em;
+  --extraSmallText: 0.7em; 
+/* rest */
+  --backgroundColor: var(--grey-0);
+  --textColor: var(--grey-1000);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+}
+/* Handdle Font Sizes in Different Screen  */
+html {
+ font-size: var(--defaultFontSize);
+}
+@media only screen and (min-width: 576px) {
+  :root {
+    --defaultFontSize: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  :root {
+    --defaultFontSize: 112.5%;
+  }
+}
+*, ::after, ::before {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+body {
+ font-family: var(--bodyFont);
+ background-color: var(--backgroundColor);
+ color: var(--textColor);
+ font-weight: 400;
+ line-height: 1.75;
+}
+h1,h2,h3,h4,h5 {
+ font-family: var(--headingFont);
+ font-weight: 400;
+ line-height: 1.3;
+ letter-spacing: var(--letterSpacing);
+ text-transform: capitalize;
+}
+h1 {
+  font-size: 3.052rem;
+}
+h2 {
+  font-size: 2.441rem;
+}
+h3 {
+  font-size: 1.953rem;
+}
+h4 {
+  font-size: 1.563rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+small, .text-small {
+ font-size: var(--smallText);
+}
+a {
+ text-decoration: none;
+}
+ul {
+ list-style: none;
+}
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.page {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: calc(100vh - (6rem + 4rem));
+}
+.hidden {
+ display: none;
+}
+/* END - Global Styles  */
+/* Navigation Bar  */
+nav {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ justify-content: space-between;
+ width: 90vw;
+ max-width: var(--max-width);
+ margin: 5px auto;
+}
+nav .logo img {
+ max-width: 200px;
+ align-self: center;
+ margin: 20px 0
+}
+.burger {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ align-self: center;
+ background-color: var(--primary-500);
+ padding: 7px;
+ border-radius: var(--borderRadius);
+ cursor: pointer;
+}
+.burger div {
+ background-color: white;
+ width: 25px;
+ height: 3px;
+ margin: 2px;
+}
+.btn {
+ background-color: var(--primary-500);
+ border-radius: var(--borderRadius);
+ padding: 3px 14px;
+}
+.btn a{
+ font-size: 1.5rem;
+ color:var(--white);
+}
+@media only screen and (max-width: 900px) {
+ nav {
+ flex-wrap: wrap;
+ }
+ .links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ .nav-links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+ }
+ .nav-links  a{
+  color: var(--black);
+  border-top: 1px solid var(--grey-500);
+  font-size: 1.5rem;
+  padding: 14px 0;
+ }
+ .nav-links  a:last-child {
+  border-bottom: 1px solid var(--grey-500);
+ }
+ .nav-links a:hover {
+  color: var(--primary-500)
+ }
+ .btn {
+  margin-top: 20px
+ }
+}
+/* END - Navigation Bar  */
+
+
+
+
+
+
+
+
+
+
+/* Footer Styles */
+footer {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 4rem;
+ background-color: var(--black);
+ color: var(--white)
+}
+
+footer a {
+ color: var(--primary-500)
+}
+
