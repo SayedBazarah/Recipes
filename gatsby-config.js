@@ -3,5 +3,17 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Recipe",
   },
-  plugins: [],
+  plugins: [
+     `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `image`,
+        path: `${__dirname}/src/assets/images/`,
+      },
+    }
+  ],
+  
 };

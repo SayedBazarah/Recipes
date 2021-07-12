@@ -3,11 +3,12 @@ import Layout from '../component/Layout'
 
 const Tags = () => {
  return (
-  <div>
-   <Layout>
+  
+   <Layout >
+     <div className='page'>
       <h1>Tags</h1>
+      </div>
     </Layout>
-  </div>
  )
 }
 
