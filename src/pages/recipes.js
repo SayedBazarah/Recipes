@@ -1,13 +1,14 @@
 import React from 'react'
 import Layout from '../component/Layout'
-
+import AllRecipes from '../component/AllRecipes'
 const Recipes = () => {
  return (
-  <div>
    <Layout>
-      <h1>Recipes</h1>
-    </Layout>
-  </div>
+    <div className='page'>
+        <AllRecipes />
+    </div>
+  </Layout>
+
  )
 }
 

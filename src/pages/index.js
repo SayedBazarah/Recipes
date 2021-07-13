@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../component/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import AllRecipes from '../component/AllRecipes'
 const Index = () => {
   return (
     <Layout>
@@ -17,6 +18,7 @@ const Index = () => {
           <h4>No Fluff, Just Recipes</h4>
         </div>
       </section>
+      <AllRecipes />
     </div>
     </Layout>
   )
