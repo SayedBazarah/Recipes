@@ -11,9 +11,7 @@ const handleTags = recipe => {
       .sort()
       .forEach(function(v,i) {
           sortTags[i] = { tag: v ,repeat: Tags[v]};
-          console.log('s',v, Tags[v]);
        });
- console.log(sortTags)
  return sortTags
 }
 
